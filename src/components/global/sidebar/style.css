@@ -1,0 +1,142 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background: var(--sidebar-color);
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    transition: var(--transition);
+    z-index: 500;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar.closed {
+    left: -280px;
+}
+
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-inline: 16px;
+    padding-block: 24px;
+}
+
+.sidebar footer {
+    padding: 16px;
+}
+
+.toggle-sidebar {
+    position: absolute;
+    border: none;
+    display: grid;
+
+    place-content: center;
+    background: var(--primary-color-light);
+
+    font-size: var(--font-md);
+    font-weight: var(--font-thin);
+    color: var(--text-color);
+
+    left: 105%;
+    top: 20%;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.toggle-sidebar:hover {
+    transform: scale(1.2);
+    box-shadow: var(--shadow-s);
+}
+
+
+.image-text {
+    height: 89px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.image-text .image svg {
+    margin-inline-end: 16px;
+    filter: drop-shadow(2px 2px 2px var(--body-color));
+}
+
+.image-text .text {
+    font-size: var(--font-xl);
+    font-weight: var(--font-semibold);
+}
+
+.search-box {
+    margin-bottom: 24px;
+}
+
+.search-sidebar {
+    background: var(--body-color);
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    outline: 1px solid var(--primary-color-translucent);
+    border-radius: var(--radius-sm);
+    height: 38px;
+    transition: var(--transition);
+}
+
+.search-sidebar:focus-within {
+    box-shadow: var(--shadow-m)
+}
+
+.search-sidebar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--text-color);
+    padding-inline: 6px;
+}
+
+.search-sidebar button {
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border-left: 1px solid var(--primary-color-translucent);
+    cursor: pointer;
+}
+
+.search-sidebar button .bx {
+    color: var(--text-color);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100vw;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar.closed {
+        left: -100vw;
+    }
+
+    .sidebar.open .toggle-sidebar {
+        left: 85%;
+    }
+}

@@ -1,0 +1,35 @@
+
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    cursor: pointer;
+    font-size: var(--font-md);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: var(--transition);
+    margin-bottom: 12px;
+    color: var(--text-color);
+  }
+  
+  
+  .nav-item.active,
+  .nav-item:hover {
+    background: var(--body-color);
+    box-shadow: var(--shadow-s);
+  }
+  
+  .nav-item.active ::after {
+    position: absolute;
+    content: "";
+    left: 1%;
+    bottom: 0;
+    right: 1%;
+    background: var(--toggle-color);
+    box-shadow: var(--shadow-m);
+    height: 1px;
+  }
+  

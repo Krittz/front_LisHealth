@@ -1,0 +1,33 @@
+.input-field {
+    display: flex;
+    position: relative;
+    padding-inline: 12px;
+    flex-direction: column;
+    color: var(--text-color);
+    transition: var(--transition);
+    border-radius: var(--radius-sm);
+    outline: 1px solid var(--primary-color-translucent);
+}
+
+.input-field label {
+    position: absolute;
+    background: var();
+    top: -15px;
+    left: 15px;
+    background: var(--sidebar-color);
+    padding-inline: 10px;
+}
+
+.input-field input {
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    color: var(--text-color);
+    padding-block: 16px;
+}
+
+.input-field:focus-within {
+    box-shadow: var(--shadow-x);
+    outline: 1px solid var(--toggle-color);
+}
