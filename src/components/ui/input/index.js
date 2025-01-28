@@ -1,6 +1,6 @@
 import './style.css';
 
-const Input = ({ label, type, id, value, placeholder, required }) => {
+const Input = ({ label, type, id, value, placeholder, required, onChange }) => {
     return (
         <div className="input-field">
             <label >
@@ -12,7 +12,8 @@ const Input = ({ label, type, id, value, placeholder, required }) => {
                 type={type}
                 value={value}
                 placeholder={placeholder}
-                required={require ? 'true' : 'false'}
+                required={required}
+                onChange={onChange}
             />
         </div>
     );

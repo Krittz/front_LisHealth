@@ -3,10 +3,11 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .auth-box h1 {
-    margin-top: 105px;
+    margin-top: 2%;
     margin-bottom: 72px;
     font-size: var(--font-xl);
 }
@@ -47,5 +48,8 @@
     .auth-box form {
         width: 100vw;
         background: transparent;
+    }
+    .auth-box form label{
+        background: var(--body-color);
     }
 }
