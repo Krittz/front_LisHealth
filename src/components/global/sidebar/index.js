@@ -1,14 +1,18 @@
 import './style.css';
 import NavItem from "../../ui/nav-item";
 import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
 
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(true);
-
+    const location = useLocation();
     const toggleSidebar = () => {
         setIsOpen(!isOpen)
     }
+
+    const isActive = (path) => location.pathname === path;
+
     return (
         <nav className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
             <header>
@@ -59,11 +63,15 @@ const Sidebar = () => {
                         </form>
                     </li>
                     <li>
-                        <NavItem active={true} icon="bx-home-alt-2" content="Início" />
+                        <NavItem active={isActive("/")} icon="bxs-dashboard" content="Painel" route="/" />
                     </li>
                     <li>
-                        <NavItem active={false} icon="bx-user" content="Perfil" />
+                        <NavItem active={isActive("/food")} icon="bxs-bowl-hot" content="Alimentos" route="food" />
                     </li>
+                    <li>
+                        <NavItem active={isActive("/profile")} icon="bxs-user" content="Perfil" route="profile" />
+                    </li>
+
 
                 </ul>
             </main>

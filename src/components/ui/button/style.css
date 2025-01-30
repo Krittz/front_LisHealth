@@ -1,7 +1,7 @@
 button {
+    color: var(--text-color);
     border: none;
     background: transparent;
-    color: var(--text);
     font-size: var(--text-md);
     font-weight: var(--font-semibold);
     cursor: pointer;

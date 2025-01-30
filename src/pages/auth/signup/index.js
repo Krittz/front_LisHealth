@@ -13,7 +13,6 @@ const SignUp = () => {
     });
 
     const [error, setError] = useState(null);
-    const [warning, setWarning] = useState(null);
     const [success, setSuccess] = useState(false);
 
     const handleInputChange = (e) => {
@@ -27,7 +26,6 @@ const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
-        setWarning(null);
         setSuccess(false);
 
         try {
@@ -70,7 +68,7 @@ const SignUp = () => {
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={handleInputChange}
-                    required={true}
+                    required={false}
                 />
                 <Input
                     id="email"
@@ -79,7 +77,7 @@ const SignUp = () => {
                     placeholder="seu.email@exemplo.com"
                     value={formData.email}
                     onChange={handleInputChange}
-                    required={true}
+                    required={false}
                 />
                 <Input
                     id="password"
@@ -88,7 +86,7 @@ const SignUp = () => {
                     placeholder="**********"
                     value={formData.password}
                     onChange={handleInputChange}
-                    required={true}
+                    required={false}
                 />
                 <Input
                     id="password_confirmation"
@@ -97,7 +95,7 @@ const SignUp = () => {
                     placeholder="**********"
                     value={formData.password_confirmation}
                     onChange={handleInputChange}
-                    required={true}
+                    required={false}
                 />
                 <Button
                     id="signup-btn"

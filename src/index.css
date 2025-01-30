@@ -11,7 +11,7 @@
 }
 
 :root {
-  
+
   --body-color: #1a1d20;
   --sidebar-color: #161719;
   --primary-color: #2D033B;
@@ -78,4 +78,30 @@ hr {
   border: .1px solid var(--primary-color-translucent);
   width: 90%;
   margin: 0 auto;
+}
+
+
+.container {
+  position: fixed;
+  width: calc(100vw - 280px);
+  height: 95vh;
+  right: 0;
+  top: 2.5vh;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.sidebar.closed~.container {
+  width: 100vw;
+}
+
+.wrapper {
+  outline: 1px solid var(--primary-color-translucent);
+  height: 99%;
+  width: 99%;
+  border-radius: var(--radius-sm);
+  padding: 12px;
 }

@@ -1,11 +1,13 @@
-const Dashboard = () => {
+
+const Food = () => {
     return (
         <div className="container">
             <div className="wrapper">
-                
+
             </div>
         </div>
+
     );
 }
 
-export default Dashboard;
+export default Food;

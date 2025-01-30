@@ -14,14 +14,14 @@ const Login = () => {
                     type="email"
                     label="Email"
                     placeholder="seu.email@exemplo.com"
-                    required={true}
+                    required={false}
                 />
                 <Input
                     id="login-password"
                     type="password"
                     label="Senha"
                     placeholder="**********"
-                    required={true}
+                    required={false}
                 />
                 <Button
                     id="button-login"
