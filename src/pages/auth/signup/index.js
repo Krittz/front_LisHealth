@@ -29,7 +29,7 @@ const SignUp = () => {
         setSuccess(false);
 
         try {
-            const response = await fetch("http://localhost:8000/api/users", {
+            const response = await fetch("http://localhost:8000/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
